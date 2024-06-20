@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>CarWorld</title>
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="FontAwsome/all.min.css">
+    <script type="text/javascript" src="FontAwsome/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="style.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+           
+            <div class="navbar-brand"><a href="index.html"><img src="images/logo.png" class="rounded-circle shadow-sm" height="60" width="60" alt="carworld"></a></div>
+            
+            <a href="index.html" class="logo-text navbar-brand"><b><span class="text-primary"> C</span>ar<span class="text-primary">W</span>orld</b></a>
+            
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#mynavbar"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav text-center ml-auto">
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><b>NEW CARS</b></a>
+                    <div class="dropdown-menu bg-light text-center">
+                        <a href="NewCarLaunches.html" class="dropdown-item"><b>NewCar Launches</b></a>
+                        <a href="UpcomingCars.html" class="dropdown-item"><b>Upcoming Cars</b></a>
+                        <a href="ElectricCars.html" class="dropdown-item"><b>Electric Cars</b></a>
+                    </div>
+                    </li>
+                    <li class="nav-item"><a href="USEDCARS.html" class="nav-link"><b>USED CARS</b></a></li>
+                    <li class="nav-item"><a href="EXPERTREVIEWS.html" class="nav-link"><b>EXPERT REVIEWS</b></a></li>
+                </ul>
+                <form action="" class="form-inline ml-auto justify-content-center ">
+                       <div class="input-group">
+                        <input type="search" class="form-control " placeholder="Search"> 
+                        <div class="input-group-append">
+                        <button class="btn btn-secondary"><i class="fas fa-search"></i></button>
+                    </div>
+                    </div>
+                 </form>
+               <div class="text-center" data-target="#loginmodal" data-toggle="modal"><i style="font-size: 30px;margin: 10px; cursor: pointer;" class="fas fa-user-circle"></i></div>
+            </div>
+        </div>
+        <div class="modal fade" id="loginmodal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    
+                    <div class="modal-body">
+                      <button class="btn btn-danger close" data-dismiss="modal">&times;</button>
+                       <br>
+                       <h5 class="modal-title">Login to CarWorld</h5>
+                
+                        <form action="" class="form mt-4">
+                            <div class="form-group mt-4">
+                                <input type="email" class="form-control" placeholder="Enter Your Email Id" required>
+                            </div>
+                            <div class="form-group mt-4">
+                                <input type="password" class="form-control" placeholder="Enter Your Password" required>
+                            </div>
+                            <div class="form-group mt-4">
+                                <input type="checkbox" class="coustom-control" id="form-chekbox" required><label for="form-chekbox" class="coustom-label"> &nbsp;Keep me signed in</label>
+                            </div>
+                            <button type="submit" class="btn btn-success">Login</button>
+                            <button type="reset" class="btn btn-danger">reset</button>
+                        </form>
+                        <div><h5 class="text-center">or</h5></div>
+                        <a href="https://accounts.google.com/b/0/AddMailService" style="
+                        text-decoration: none;">
+                        <div class="text-center text-muted border p-3"><img src="images/google-logo.jpg" width="20" alt="google-logo" class="img-fluid"> Continue With Google</div>
+                        </a>
+                        <div class="text-center mt-3 p-3"><Span class="ml-3">Don’t have an account?</Span><a href="" data-target="#loginmodal1" data-toggle="modal" id="signup"> Sign Up</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="loginmodal1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    
+                    <div class="modal-body">
+                      <button class="btn btn-danger close" data-dismiss="modal">&times;</button>
+                       <br>
+                       <h5 class="modal-title">Sign Up to CarWorld</h5>
+                
+                        <form action="" class="form mt-4">
+                           <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">NAME</label>
+                                <input type="text" class="form-control" placeholder="Enter Your Full Name" required>
+                            </div>
+                            <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">EMAIL</label>
+                                <input type="email" class="form-control" placeholder="Enter Your Email Id" required>
+                            </div>
+                            <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">MOBILE</label>
+                                <input type="number" class="form-control" placeholder="Enter Your Number">
+                            </div>
+                            <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">PASSWORD</label>
+                                <input type="password" class="form-control" placeholder="Enter Your Password" required>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-success">Sign Up</button>
+                        </form>
+                        <div class="text-center mt-3 p-3"><Span class="ml-3">Already have an account?</Span><a href="" id="login" data-target="#loginmodal" data-toggle="modal"> Login</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>2020 Honda All New City Diesel First Drive Review</h3>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <div class="row">
+                   <div class="col-12">
+                       <b class="p-1">Bilal Ahmed Firfiray</b><br>
+                       <b class="p-1" style="font-size: 12px;color: gray;">June 30, 2020, 11:00 AM IST</b>
+                   </div>
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Honda-All-New-City/Honda-All-New-City-1.jpg" class="img-fluid p-1" alt="kia-sonet">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <h2 style="font-size: 20px;">What is it?</h2>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <p class="text-justify">This is Honda’s All New City. In its fifth-generation now, the sedan will be launched in July with three powertrain choices – petrol-manual, petrol-CVT and the one we are driving here – the diesel manual.</p>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <p class="text-justify">Dimension-wise, the new City’s overall length of 4600mm is up by 160mm and the width is increased by 55mm to 1750mm. While it sits slightly lower, it retains the same wheelbase as the model it replaces (2600mm). Honda says the new City is as big as the previous-gen Civic which was sold in India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                          Styling-wise, the new City continues with its traditional low-slung nose, but this one has a more in-your-face layout. Mostly because of the chrome-slat running across the nose joining the large, wraparound headlamps. These all-LED headlamps look like a scaled-down version of the Accord’s unit.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Honda-All-New-City/Honda-All-New-City-2.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-lg-6 ">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Honda-All-New-City/Honda-All-New-City-3.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+           <div class="col-lg-6">
+               <div class="row">
+                   
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                          In profile, there are creases running across the side and the sedan sits on newly-designed 16-inch alloys. At the back, we liked the look of the sleek LED tail lamps along with the ducktail style of the boot. That said, there are interesting elements, recesses and creases making the new City look handsome from all angles.
+                       </p>
+                       <p class="text-justify">
+                         Overall, the new-generation City has gotten classier and more mature while growing in dimensions. Although the design is sporty, it is not exactly aggressive as some may have expected. In turn, the 2020 City rather looks upmarket and appealing.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                  <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;">How is it on the inside?</h2>
+                    </div>
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                           On the inside, the new City continues its modern aura with a completely reworked cabin. Although the Verna did it first, the all-digital instrument cluster is a welcome addition. Honda has retained the dual-circular-dial layout, with an analogue needle for the speedometer adding to its old-school charm. It is easy to read and navigate and can also be configured to display a G-force meter instead of a tachometer.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Honda-All-New-City/Honda-All-New-City-4.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Honda-All-New-City/Honda-All-New-City-5.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-6">
+               <div class="row">
+                   
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                          Seating posture is also spot on and everything falls right in your hand. The chunky steering wheel is new and feels good to hold. Even the large and supportive seats help in ergonomics as they offer ample bolstering and lateral support. A bit more under-thigh support would have been perfect. Cabin space has always been the City’s forte, and the new one is no different. There are ample head and shoulder room, while the thin A-pillars and repositioned ORVMs provide good visibility.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+         <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                           However, we found the infotainment screen placement to be at a quirky angle. This makes it difficult to operate while driving. Its interface is simple and an improvement, yet it is the least interesting one in the market. Below it, the air-con controls are an improvement over the previous car. In terms of storage, there’s a deep recess in the centre console along with a slot for mobile phone. But that slot is placed such that it simply hides away your phone below the console. On the down side, the dashboard and some touch points still use hard plastics. Honda could have used softer materials here to make the City feel more premium. Weirdly, there’s also a single wooden insert onthe slab-like dashboard in the otherwise contemporary cabin.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Honda-All-New-City/Honda-All-New-City-6.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="row mt-2">
+        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Honda-All-New-City/Honda-All-New-City-7.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-6">
+               <div class="row">
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                          In terms of features, there are six airbags, sunroof, ambient lighting, climate control, and rear camera. It also gets a new Lane Watch system (from the Civic) which is a pretty useful feature. This being a modern car, the carmaker has also upped the Honda Connect with Alexa-based services offering no less than 32 connected car features.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;">How does it drive?</h2>
+                    </div>
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                          Although the petrol engine is new, Honda has retained the 1.5-litre four-cylinder iDTEC diesel engine and it is available only with a six-speed manual for now. In the BS6 guise, it produces 98bhp of power at 3600rpm while the maximum torque of 200Nm is accessible from 1750rpm. Unlike before, the diesel felt a lot silent and vibe-free upon starting up and at idling thanks to improved NVH levels.
+                       </p>
+                       <p class="text-justify">
+                         There’s ample grunt from the motor the moment you let go of the clutch – which is smooth and feels light, but it might still feel heavier compared to the petrol derivative. Where the engine was completely muted while idling, the typical diesel clatter kicks in once past 2000rpm, and it keeps filtering inside the cabin, which might not be acceptable to some buyers.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Honda-All-New-City/Honda-All-New-City-8.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="row mt-2">
+        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Honda-All-New-City/Honda-All-New-City-9.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-6">
+               <div class="row">
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                          On the go, we barely noticed any lack of power under 2000rpm. But once the turbo kicks in, there’s a strong punch from the four-cylinder and it pulls cleanly all the way till the 4000rpm redline. In the mid-range (between 2000-4000rpm), the oil burner feels linear and is very tractable as well, which is pretty useful both in city and on long distance jaunts.
+                       </p>
+                       <p class="text-justify">
+                          The steering is well-weighted and is direct with no delay or lags while turning in, although it could do with a tad more feedback. On the flip side, we expected better bite from the brakes though, as the pedal needs to be depressed significantly for desired braking. Overall, the new City is a fun to drive sedan.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+         <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;">Should I buy one?</h2>
+                    </div>
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                          It's been almost 22 years since the Honda City came into existence and it has remained a renowned and the longest-running model in its class. So we obviously have a lot of expectation from the new one. It is safe to say that the new City is handsome to look at and has an upmarket character. On the inside, it is more spacious than before and offers a decent list of equipment too. It also scores high on safety standards. As for the diesel powertrain, the punchy oil burner is a proven motor and performs well whatever is asked of it. Not only is it easy to drive, but it is also frugal making it easy on the pocket as well. Although the prices could go up compared to the fourth-gen City, we expect Honda to price it strategically. We'll know in coming weeks.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Honda-All-New-City/Honda-All-New-City-10.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="row mt-2">
+        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Honda-All-New-City/Honda-All-New-City-2.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-6">
+               <div class="row">
+                  <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;">Where does it fit in?</h2>
+                    </div>
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                         When launched, the All New City will compete in the C-segment with the Hyundai Verna, Maruti Suzuki Ciaz, apart from Volkswagen Vento, Toyota Yaris and Skoda Rapid TSI. But, of the lot, only the Verna is currently available with a BS6 diesel. Also, the new City will be sold alongside the fourth-gen model.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-5" id="footer">
+               <div class="row navbar bg-dark text-white">
+                  <div class="col-12">
+                     <center>
+                      <a href="index.html" class="logo-text navbar-brand"><b><span class="text-primary"> C</span>ar<span class="text-primary">W</span>orld</b></a>
+                      </center>
+                  </div>
+                  <div class="col-12 border"></div>
+                   <div class="col-md-4 mt-md-n5">
+                       <ul class="list-group">
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="About-Us.html">About Us</a></li>
+                           <li><a href="Terms&Conditions.html">Terms &amp; Conditions</a></li>
+                           <li><a href="ContactUs.html">Contact Us</a></li>
+                       </ul>
+                       <div class="row">
+                         <div class="col-12 mb-n3 mt-3">
+                          <p>Connect with us</p>
+                          </div>
+                           <div class="col-1">
+                           <a href="https://www.facebook.com/" >
+                           <i style="font-size: 30px;" class="fab fa-facebook"></i>
+                           </a>
+                           </div>
+                           <div class="col-1">
+                            <a href="https://twitter.com/?lang=en">
+                           <i style="font-size: 30px;" class="fab fa-twitter-square"></i>
+                           </a>
+                           </div>
+                           <div class="col-1">
+                            <a href="https://in.linkedin.com/">
+                           <i style="font-size: 30px;" class="fab fa-linkedin"></i>
+                           </a>
+                           </div>
+                           <div class="col-1">
+                            <a href="https://www.instagram.com/?hl=en">
+                           <i style="font-size: 30px;" class="fab fa-instagram-square"></i>
+                           </a>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4 mt-md-n5 mt-5">
+                   <p><b>CarWorld: </b>A - 1, Karelibaug Road, Opp New Vuda Building, Near L &amp; T Circle, Jay Santhoshi Nagar Society, Karelibagh, Vadodara, Gujarat 390018</p>
+                   <p><b>Phone: </b>+91 6354956340</p>
+                   </div>
+                   <div class="col-md-4 mt-5">
+                       <div class="row">
+                           <div class="col">
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.5503001877332!2d73.19552431426902!3d22.324816047647555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x54b301ff834e827!2sCar%20World!5e1!3m2!1sen!2sin!4v1615259644289!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="row" style="background-color: black;">
+                  <div class="col text-center">
+                   <b class=" text-white">©2021 www.CarWorld.com</b>
+                   </div>
+               </div>
+            </div>
+</body>
+</html>

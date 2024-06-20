@@ -1,0 +1,142 @@
+
+.hero{
+	height:70vh;
+	width: 100%;
+	background-image: url(images/run-car/sky.jpg);
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+}
+.highway{
+	height: 200px;
+	width: 1800%;
+	display: block;
+	background-image: url(images/run-car/road.jpg);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+   transition: height,width 1s,1s linear;
+	animation: highway 5s linear infinite;
+}
+@keyframes highway
+{
+	100%{
+		transform: translateX(-3400px);		
+        }
+}
+.city
+{
+	height: 250px;
+	width: 700%;
+	background-image: url(images/run-car/city.png);
+	position: absolute;
+	bottom: 200px;
+	left: 0;
+	right: 0;
+	display: block;
+	z-index: 1;
+	background-repeat: repeat-x;
+    transition: height,bottom 1s,1s linear;
+	animation: city 20s linear infinite;
+	
+}
+@keyframes city 
+{
+	100%{
+		transform: translateX(-1400px);
+	}
+}
+.car{
+	width: 400px;
+	left: 50%;
+	bottom: 100px;
+	transform: translateX(-50%);
+	position: absolute;
+	z-index: 2;
+	transition: height,width 1s,1s linear;
+}
+.car img{
+	width: 100%;
+	animation: car 1s linear infinite;
+}
+@keyframes car
+{
+	100%{
+		transform: translateY(-1px);
+	}
+	50%{
+		transform: translateY(1px);
+	}
+	0%{
+		transform: translateY(-1px);
+	}
+}
+.wheel{
+	left: 50%;
+	bottom: 178px;
+	transform:translateX(-50%);
+	position: absolute;
+    transition: height,width 1s,1s linear;
+	z-index: 2;
+}
+.wheel img
+{
+	width: 72px;
+	height: 72px;
+	animation: wheel 1s linear infinite;
+}
+.backwheel
+{
+	left: -165px;
+	position: absolute;
+	
+}
+.frontwheel
+{
+	left: 80px;
+	position: absolute;
+	
+}
+@keyframes wheel
+{
+	100%{
+		transform: rotate(360deg)
+	}
+}
+
+@media screen and (max-width:500px){
+    .hero{
+        height: 60vh;
+    } 
+    .highway{
+     height: 150px;
+    }
+    .city{
+        height: 230px;
+        bottom: 150px;
+    }
+    .car{
+        left: 57%;
+         bottom: 60px;
+    }
+    .car img{
+        width: 80%;
+    }
+    .wheel img{
+	width: 56px;
+	height: 56px;
+    }
+    .wheel{
+        left: 57%;
+	bottom: 120px;
+}
+    .backwheel{
+        left: -170px;
+    }
+    .frontwheel{
+        left: 25px;
+    }
+}

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>CarWorld</title>
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="FontAwsome/all.min.css">
+    <script type="text/javascript" src="FontAwsome/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="style.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+           
+            <div class="navbar-brand"><a href="index.html"><img src="images/logo.png" class="rounded-circle shadow-sm" height="60" width="60" alt="carworld"></a></div>
+            
+            <a href="index.html" class="logo-text navbar-brand"><b><span class="text-primary"> C</span>ar<span class="text-primary">W</span>orld</b></a>
+            
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#mynavbar"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav text-center ml-auto">
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><b>NEW CARS</b></a>
+                    <div class="dropdown-menu bg-light text-center">
+                        <a href="NewCarLaunches.html" class="dropdown-item"><b>NewCar Launches</b></a>
+                        <a href="UpcomingCars.html" class="dropdown-item"><b>Upcoming Cars</b></a>
+                        <a href="ElectricCars.html" class="dropdown-item"><b>Electric Cars</b></a>
+                    </div>
+                    </li>
+                    <li class="nav-item"><a href="USEDCARS.html" class="nav-link"><b>USED CARS</b></a></li>
+                    <li class="nav-item"><a href="EXPERTREVIEWS.html" class="nav-link"><b>EXPERT REVIEWS</b></a></li>
+                </ul>
+                <form action="" class="form-inline ml-auto justify-content-center ">
+                       <div class="input-group">
+                        <input type="search" class="form-control " placeholder="Search"> 
+                        <div class="input-group-append">
+                        <button class="btn btn-secondary"><i class="fas fa-search"></i></button>
+                    </div>
+                    </div>
+                 </form>
+               <div class="text-center" data-target="#loginmodal" data-toggle="modal"><i style="font-size: 30px;margin: 10px; cursor: pointer;" class="fas fa-user-circle"></i></div>
+            </div>
+        </div>
+        <div class="modal fade" id="loginmodal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    
+                    <div class="modal-body">
+                      <button class="btn btn-danger close" data-dismiss="modal">&times;</button>
+                       <br>
+                       <h5 class="modal-title">Login to CarWorld</h5>
+                
+                        <form action="" class="form mt-4">
+                            <div class="form-group mt-4">
+                                <input type="email" class="form-control" placeholder="Enter Your Email Id" required>
+                            </div>
+                            <div class="form-group mt-4">
+                                <input type="password" class="form-control" placeholder="Enter Your Password" required>
+                            </div>
+                            <div class="form-group mt-4">
+                                <input type="checkbox" class="coustom-control" id="form-chekbox" required><label for="form-chekbox" class="coustom-label"> &nbsp;Keep me signed in</label>
+                            </div>
+                            <button type="submit" class="btn btn-success">Login</button>
+                            <button type="reset" class="btn btn-danger">reset</button>
+                        </form>
+                        <div><h5 class="text-center">or</h5></div>
+                        <a href="https://accounts.google.com/b/0/AddMailService" style="
+                        text-decoration: none;">
+                        <div class="text-center text-muted border p-3"><img src="images/google-logo.jpg" width="20" alt="google-logo" class="img-fluid"> Continue With Google</div>
+                        </a>
+                        <div class="text-center mt-3 p-3"><Span class="ml-3">Don’t have an account?</Span><a href="" data-target="#loginmodal1" data-toggle="modal" id="signup"> Sign Up</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="loginmodal1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    
+                    <div class="modal-body">
+                      <button class="btn btn-danger close" data-dismiss="modal">&times;</button>
+                       <br>
+                       <h5 class="modal-title">Sign Up to CarWorld</h5>
+                
+                        <form action="" class="form mt-4">
+                           <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">NAME</label>
+                                <input type="text" class="form-control" placeholder="Enter Your Full Name" required>
+                            </div>
+                            <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">EMAIL</label>
+                                <input type="email" class="form-control" placeholder="Enter Your Email Id" required>
+                            </div>
+                            <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">MOBILE</label>
+                                <input type="number" class="form-control" placeholder="Enter Your Number">
+                            </div>
+                            <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">PASSWORD</label>
+                                <input type="password" class="form-control" placeholder="Enter Your Password" required>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-success">Sign Up</button>
+                        </form>
+                        <div class="text-center mt-3 p-3"><Span class="ml-3">Already have an account?</Span><a href="" id="login" data-target="#loginmodal" data-toggle="modal"> Login</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Nissan Magnite Turbo: Pros and Cons review</h3>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <div class="row">
+                   <div class="col-12">
+                       <b class="p-1">Ninad Ambre</b><br>
+                       <b class="p-1" style="font-size: 12px;color: gray;">March 03, 2021, 09:11 AM IST</b>
+                   </div>
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Nissan-Magnite-Turbo/Nissan-Magnite-Turbo-1.jpg" class="img-fluid p-1" alt="kia-sonet">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <h2 style="font-size: 20px;">Introduction</h2>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <p class="text-justify">The sub-four metre compact SUV trend started with the Ford EcoSport. Then came the Maruti Suzuki Brezza, Tata Nexon, Mahindra XUV300, Hyundai Venue, Kia Sonet, Honda WR-V, and the Toyota Urban Cruiser. And now there's the Nissan Magnite along with its cousin - the Renault Kiger. Ten different carmakers, each of which has a compact SUV in India - easily conforming to the rise in popularity of vehicles in this segment!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                      <div class="col-12 mt-5">
+                        <h2 style="font-size: 20px;">Positives</h2>
+                        <h4 style="font-size: 15px;">1. Explosive/Disparate looks</h4>
+                    </div>
+                       <p class="text-justify">
+                           I'll start off by saying looks are very subjective. So, you may or may not like the appearance of the Magnite, but you will have to appreciate the unique design of this car. It is essentially very different in its kind, and Nissan has managed to give it an exclusive identity. Yes, it's based on the same CMF-A modular platform that the Kiger is based on, under Renault-Nissan's alliance. But, there's enough differentiation between the two, and if I were to choose one, it would definitely be the Magnite for its quirky design!
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Nissan-Magnite-Turbo/Nissan-Magnite-Turbo-2.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-lg-6 ">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Nissan-Magnite-Turbo/Nissan-Magnite-Turbo-3.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+           <div class="col-lg-6">
+               <div class="row">
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                           Butch yet sharp looks and that muscular styling gives it that macho appeal. And then there are the eye-catching elements like the slim headlamps, DRLs, fog lamps, alloys, and LED taillamps. Although, if any buyer thinks it's not promising enough, Nissan is offering a plethora of exterior and interior accessories to add to a customer's delight.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                  <div class="col-12 mt-5">
+                        <h4 style="font-size: 15px;">2. Automatic convenience</h4>
+                    </div>
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                           As mentioned earlier, this turbo-petrol is also available with a CVT automatic gearbox option, and in its top-spec XV Premium (O) CVT trim, it goes up to Rs 9.45 lakh (ex-showroom). Well, it's quite nice to have this turbo and CVT combo as it offers a very smooth and effortless driving experience. It will easily score over the jerky AMTs that are otherwise available with some other SUVs. It's tuned nicely for city use and with the linear power delivery, feels very smooth. In fact, with this automatic version, you will not have that 'turbo kick' as the car makes progress in a very linear manner. So gaining momentum will never feel abrupt and there's not much of a head-nod as well.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Nissan-Magnite-Turbo/Nissan-Magnite-Turbo-4.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Nissan-Magnite-Turbo/Nissan-Magnite-Turbo-5.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-6">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;"> <h4 style="font-size: 15px;">3. Packs a punch</h4></h2>
+                    </div>
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                         If a small car with turbo power excites you for a very peppy performance, you surely will like the turbo Magnite. It does provide quite a sprightly performance with 1,039kg kerb weight and 100bhp at its disposal. Though this 1.0-litre turbocharged three-cylinder unit feels strong post 2,000rpm, it doesn’t feel dead at 1,500rpm and is quite a tractable engine. The roll-on figures of the CVT version in kick-down are commendable with the 20-80kmph completed in 6.22 seconds, and the 40-100kmph run in 8.38 seconds. Also, the manual picks up from 20kmph in third gear without a fuss and even while picking up from 40kmph in fourth gear. This is evident from the timing of 11.08 seconds for the 20-80kmph run and 15.32 seconds for the 40-100kmph acceleration. It clearly comes across as a city-friendly turbo-petrol with a good performance.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+         <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                  <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;"> <h4 style="font-size: 15px;">4. Quick off-the-mark</h4></h2>
+                    </div>
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                          When we took a look at the 0-100kmph sprint times, we were quite surprised how this one has come out on top. The turbo manual smashed the 0-100kmph sprint record in just 10.28 seconds, while the CVT version accelerated to 100 from standstill in 11.14 seconds. Yes, the manual is a little quicker than the CVT, but as a whole, these figures make the Magnite one of the quickest cars in its segment
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Nissan-Magnite-Turbo/Nissan-Magnite-Turbo-6.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="row mt-2">
+        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Nissan-Magnite-Turbo/Nissan-Magnite-Turbo-7.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-6">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;"> <h4 style="font-size: 15px;">5. High off-the-ground</h4></h2>
+                    </div>
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                         However, it’s noteworthy over conditions like broken roads, when the tarmac ends, or with one wheel off the tarmac, this enhanced ground clearance and 195/60 R16 section wheels are truly fantastic for a car of this size. And even if its ride quality is good, do note it will not dismiss bad roads with utter disdain. But you can be sure it will take small bumps and speed breakers in its stride with comfort. Clearing small stones and obstacles without touching the underbody is easily doable.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;">Negatives</h2>
+                        <h4 style="font-size: 15px;">1. Not robustly-built</h4>
+                    </div>
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                          I still wish the car gave a strong, durable, and built-to-last feeling. The way things feel at hand, upon being operated, and the quality of materials along with the use of plastics, they definitely aren't cheap but make cost-cutting quite evident. It lacks that rock-solid feel and does remind you of the car being built at a cost. Sure, it's not as average as the Datsun's entry-level cars, but still could have been better when compared to its rivals. The NVH levels are also quite okay, but the three-cylinder thrum can be heard inside the cabin. And it only gets louder post 3,000rpm with some vibrations creeping into the cabin as well.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Nissan-Magnite-Turbo/Nissan-Magnite-Turbo-8.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="row mt-2">
+        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Nissan-Magnite-Turbo/Nissan-Magnite-Turbo-9.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-6">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h4 style="font-size: 15px;">2. Dealer network is a gamble</h4>
+                    </div>
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                         Nissan is strengthening its after-sales service in India with constant efforts like opening new dealerships and part distribution centres. Yet, with a limited network spread across the country, it's still not at par with most of its rivals. Customers today can't stand inconsistent after-sales service quality even if the product is outstanding. So will people be able to look past Nissan's after-sales reputation? Only time will tell. I sincerely hope the Magnite does help in being the game-changer for the carmaker.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+         <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;">Conclusion</h2>
+                    </div>
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                         As a product, the Nissan Magnite has quite nailed it with its looks for a car that comes with a lot of features and functionalities at an affordable price point. When it comes to quality, fit and finish, some things still come across as less-than-perfect to a trained eye. However, for its styling, compact dimensions, peppy engine, features and the price-point at which it has been launched, all of these make this package very compelling.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Nissan-Magnite-Turbo/Nissan-Magnite-Turbo-10.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-5" id="footer">
+               <div class="row navbar bg-dark text-white">
+                  <div class="col-12">
+                     <center>
+                      <a href="index.html" class="logo-text navbar-brand"><b><span class="text-primary"> C</span>ar<span class="text-primary">W</span>orld</b></a>
+                      </center>
+                  </div>
+                  <div class="col-12 border"></div>
+                   <div class="col-md-4 mt-md-n5">
+                       <ul class="list-group">
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="About-Us.html">About Us</a></li>
+                           <li><a href="Terms&Conditions.html">Terms &amp; Conditions</a></li>
+                           <li><a href="ContactUs.html">Contact Us</a></li>
+                       </ul>
+                       <div class="row">
+                         <div class="col-12 mb-n3 mt-3">
+                          <p>Connect with us</p>
+                          </div>
+                           <div class="col-1">
+                           <a href="https://www.facebook.com/" >
+                           <i style="font-size: 30px;" class="fab fa-facebook"></i>
+                           </a>
+                           </div>
+                           <div class="col-1">
+                            <a href="https://twitter.com/?lang=en">
+                           <i style="font-size: 30px;" class="fab fa-twitter-square"></i>
+                           </a>
+                           </div>
+                           <div class="col-1">
+                            <a href="https://in.linkedin.com/">
+                           <i style="font-size: 30px;" class="fab fa-linkedin"></i>
+                           </a>
+                           </div>
+                           <div class="col-1">
+                            <a href="https://www.instagram.com/?hl=en">
+                           <i style="font-size: 30px;" class="fab fa-instagram-square"></i>
+                           </a>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4 mt-md-n5 mt-5">
+                   <p><b>CarWorld: </b>A - 1, Karelibaug Road, Opp New Vuda Building, Near L &amp; T Circle, Jay Santhoshi Nagar Society, Karelibagh, Vadodara, Gujarat 390018</p>
+                   <p><b>Phone: </b>+91 6354956340</p>
+                   </div>
+                   <div class="col-md-4 mt-5">
+                       <div class="row">
+                           <div class="col">
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.5503001877332!2d73.19552431426902!3d22.324816047647555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x54b301ff834e827!2sCar%20World!5e1!3m2!1sen!2sin!4v1615259644289!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="row" style="background-color: black;">
+                  <div class="col text-center">
+                   <b class=" text-white">©2021 www.CarWorld.com</b>
+                   </div>
+               </div>
+            </div>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>CarWorld</title>
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="FontAwsome/all.min.css">
+    <script type="text/javascript" src="FontAwsome/all.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="style.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+           
+            <div class="navbar-brand"><a href="index.html"><img src="images/logo.png" class="rounded-circle shadow-sm" height="60" width="60" alt="carworld"></a></div>
+            
+            <a href="index.html" class="logo-text navbar-brand"><b><span class="text-primary"> C</span>ar<span class="text-primary">W</span>orld</b></a>
+            
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#mynavbar"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav text-center ml-auto">
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><b>NEW CARS</b></a>
+                    <div class="dropdown-menu bg-light text-center">
+                        <a href="NewCarLaunches.html" class="dropdown-item"><b>NewCar Launches</b></a>
+                        <a href="UpcomingCars.html" class="dropdown-item"><b>Upcoming Cars</b></a>
+                        <a href="ElectricCars.html" class="dropdown-item"><b>Electric Cars</b></a>
+                    </div>
+                    </li>
+                    <li class="nav-item"><a href="USEDCARS.html" class="nav-link"><b>USED CARS</b></a></li>
+                    <li class="nav-item"><a href="EXPERTREVIEWS.html" class="nav-link"><b>EXPERT REVIEWS</b></a></li>
+                </ul>
+                <form action="" class="form-inline ml-auto justify-content-center ">
+                       <div class="input-group">
+                        <input type="search" class="form-control " placeholder="Search"> 
+                        <div class="input-group-append">
+                        <button class="btn btn-secondary"><i class="fas fa-search"></i></button>
+                    </div>
+                    </div>
+                 </form>
+               <div class="text-center" data-target="#loginmodal" data-toggle="modal"><i style="font-size: 30px;margin: 10px; cursor: pointer;" class="fas fa-user-circle"></i></div>
+            </div>
+        </div>
+        <div class="modal fade" id="loginmodal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    
+                    <div class="modal-body">
+                      <button class="btn btn-danger close" data-dismiss="modal">&times;</button>
+                       <br>
+                       <h5 class="modal-title">Login to CarWorld</h5>
+                
+                        <form action="" class="form mt-4">
+                            <div class="form-group mt-4">
+                                <input type="email" class="form-control" placeholder="Enter Your Email Id" required>
+                            </div>
+                            <div class="form-group mt-4">
+                                <input type="password" class="form-control" placeholder="Enter Your Password" required>
+                            </div>
+                            <div class="form-group mt-4">
+                                <input type="checkbox" class="coustom-control" id="form-chekbox" required><label for="form-chekbox" class="coustom-label"> &nbsp;Keep me signed in</label>
+                            </div>
+                            <button type="submit" class="btn btn-success">Login</button>
+                            <button type="reset" class="btn btn-danger">reset</button>
+                        </form>
+                        <div><h5 class="text-center">or</h5></div>
+                        <a href="https://accounts.google.com/b/0/AddMailService" style="
+                        text-decoration: none;">
+                        <div class="text-center text-muted border p-3"><img src="images/google-logo.jpg" width="20" alt="google-logo" class="img-fluid"> Continue With Google</div>
+                        </a>
+                        <div class="text-center mt-3 p-3"><Span class="ml-3">Don’t have an account?</Span><a href="" data-target="#loginmodal1" data-toggle="modal" id="signup"> Sign Up</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="loginmodal1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    
+                    <div class="modal-body">
+                      <button class="btn btn-danger close" data-dismiss="modal">&times;</button>
+                       <br>
+                       <h5 class="modal-title">Sign Up to CarWorld</h5>
+                
+                        <form action="" class="form mt-4">
+                           <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">NAME</label>
+                                <input type="text" class="form-control" placeholder="Enter Your Full Name" required>
+                            </div>
+                            <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">EMAIL</label>
+                                <input type="email" class="form-control" placeholder="Enter Your Email Id" required>
+                            </div>
+                            <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">MOBILE</label>
+                                <input type="number" class="form-control" placeholder="Enter Your Number">
+                            </div>
+                            <div class="form-group mt-4">
+                               <label style="font-size: 13px;" for="" class="form-label">PASSWORD</label>
+                                <input type="password" class="form-control" placeholder="Enter Your Password" required>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-success">Sign Up</button>
+                        </form>
+                        <div class="text-center mt-3 p-3"><Span class="ml-3">Already have an account?</Span><a href="" id="login" data-target="#loginmodal" data-toggle="modal"> Login</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Mahindra Thar Petrol Automatic: Pros and Cons</h3>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg-6">
+                <div class="row">
+                   <div class="col-12">
+                       <b class="p-1">Santosh Nair</b><br>
+                       <b class="p-1" style="font-size: 12px;color: gray;">January 11, 2021, 09:45 PM IST</b>
+                   </div>
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Mahindra-Thar-Petrol/Mahindra-Thar-Petrol-1.jpg" class="img-fluid p-1" alt="kia-sonet">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <h2 style="font-size: 20px;">Introduction</h2>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <p class="text-justify">Ever since the new Mahindra Thar has been introduced in India, there’s been waves of interest with requests pouring in to know about how well it can take up the job of being the only car in the garage. Which of course, we’ve detailed in our review that you can read here.</p>
+                         <p class="text-justify">Nonetheless, in this piece we’ll be covering specific bits on the petrol automatic model. So without further ado, here are the five things that work in favour of the new petrol Thar, and two that don’t.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                      <div class="col-12 mt-5">
+                        <h2 style="font-size: 20px;">Positives</h2>
+                        <h4 style="font-size: 15px;">1: Stands out</h4>
+                    </div>
+                       <p class="text-justify">
+                           No matter what the age, everyone loves glancing at the Thar. Be it children, your grandmother or even the building’s security guard. This is one vehicle that literally leaves the masses gasping for more.
+                       </p>
+                       <p class="text-justify">
+                           And we can’t agree less, especially with the new iteration. It's larger and mature, looks more fit for its purpose, has its rough edges trimmed, doesn’t immediately invite thoughts on future modifications, and most importantly, it truly looks more passenger friendly; something the earlier avatar was seriously deprived of.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Mahindra-Thar-Petrol/Mahindra-Thar-Petrol-2.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-lg-6 ">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Mahindra-Thar-Petrol/Mahindra-Thar-Petrol-3.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+           <div class="col-lg-6">
+               <div class="row">
+                   <div class="col-12  mt-2">
+                      <div class="col-12 mt-5">
+                        <h4 style="font-size: 15px;">2 : Petrol performance</h4>
+                    </div>
+                       <p class="text-justify">
+                           The petrol 2.0-litre 150bhp/320Nm mStallion engine is coupled here to an automatic six-speed torque convertor gearbox. This one's a gem from Mahindra owing to its smooth, silent and powerful nature. Sure, the gearbox may not be one of the smoother shifting ones, but it gets the job done without hassles.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                  
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                          Whether it’s driving in bumper-to-bumper traffic, moving about for an errand or whether you’re munching miles out on the highway, driving the petrol Thar is an effortless affair since the motor seamlessly pumps out the horses as the gearbox leisurely shifts cogs. To give you a perspective, the sprint to 100kmph is despatched in just 10.17 seconds, while the 20-80 and 40-100kmph runs in kick-down took just 5.80 and 7.80 seconds.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Mahindra-Thar-Petrol/Mahindra-Thar-Petrol-4.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Mahindra-Thar-Petrol/Mahindra-Thar-Petrol-6.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-6">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;"> <h4 style="font-size: 15px;">3: Front seat space and storage</h4></h2>
+                    </div>
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                        When seated in the front of the Thar, you will appreciate the overall back support. There’s ample cushioning for your back that’s complemented by adjustable lumbar and an adequate amount of lateral and shoulder support. What’s nice is that this is further accompanied by the tremendous amount of headroom and generous shoulder room too.
+                       </p>
+                       <p class="text-justify">
+                       In terms of storage, there’s lots that you can stuff into the door pad, a one-litre bottle included. Then, a flat storage in the centre console can gulp most of your accessories while the twin cup-holders can also double up to swallow any more that you’d like to stash away.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+         <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                  <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;"> <h4 style="font-size: 15px;">4: Built to last a lifetime</h4></h2>
+                    </div>
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                          If you are the kind who believes in keeping a car for a very long time, like me, then the Thar certainly fits that bill. As a matter of fact, the simplicity of the design along with the ruggedness of the mechanicals somehow render it a timeless ownership experience; more-so because it feels like it can withstand the test of time. You see, one can instantly find out that it is a well-engineered product simply after taking a short spin in it.
+                       </p>
+                       <p class="text-justify">
+                          Plus, we all know about its proven credentials thanks to its predecessor. If I were to put it, timely services, paint jobs and some pure automotive love should have a really long-term relationship covered.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Mahindra-Thar-Petrol/Mahindra-Thar-Petrol-7.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="row mt-2">
+        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Mahindra-Thar-Petrol/Mahindra-Thar-Petrol-5.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-6">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;"> <h4 style="font-size: 15px;">5: Off-roading prowess</h4></h2>
+                    </div>
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                         In our pristine images of the Thar that you see here, our vehicle had to trample upon large rocks, uneven surfaces and crazy inclinations to get to the shoot spot. And we have to admit that our petrol Thar accomplished these without breaking a sweat. Of course we expected that too!
+                       </p>
+                       <p class="text-justify">
+                         If you truly take an unadulterated drive around our beautiful country, you’ll notice that the uncanny terrain throws up so many challenges that inadvertently spells the end of the road for most vehicles; which at times can be heart-breaking to say the least. But that’s never the case with the Thar. Enjoy the wilderness at its best.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;">Negatives</h2>
+                        <h4 style="font-size: 15px;">1. Overall practicality</h4>
+                    </div>
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                         This petrol automatic hard-top version of the Mahindra Thar costs Rs 16.26 lakh (OTR Mumbai), which runs into the territory of the Hyundai Creta, Kia Seltos and the likes. Clearly, expectations can also run high so to say. And, this, the Thar simply can’t match.
+                       </p>
+                       <p class="text-justify">
+                         For one, the lack of rear doors, then, there’s the inconvenience brought about by its fixed rear windows, the centrally placed power window switches and uncomfortable rear seats with restrictive foot-space. Add to that an impractical boot that can only swallow a few soft bags at best, and we are looking at luggage loading alternatives already.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Mahindra-Thar-Petrol/Mahindra-Thar-Petrol-9.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+         <div class="row mt-2">
+        <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Mahindra-Thar-Petrol/Mahindra-Thar-Petrol-10.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-6">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h4 style="font-size: 15px;">2. Petrol efficiency</h4>
+                    </div>
+                   <div class="col-12  mt-2">
+                       <p class="text-justify">
+                         The petrol 2.0-litre mStallion mill makes all of 150bhp and 320Nm of torque. And, it needs all that ‘go’ to lug its body-and-mechanics over rocks and other challenging terrain. So yes, it can drift from ‘sipping’ to ‘drinking’ fuel quite rapidly.
+                       </p>
+                       <p class="text-justify">
+                        To give you a perspective, a light foot got us anywhere between 8-10kmpl when we glanced at the instrumentation. This swiftly dropped around 7.7kmpl while we were pulling off some fast runs and mild off-roading.
+                       </p>
+                   </div>
+               </div>
+           </div>
+        </div>
+         <div class="row mt-2">
+           <div class="col-lg-6 order-2 order-lg-1 mt-2">
+               <div class="row">
+                   <div class="col-12 mt-2">
+                        <h2 style="font-size: 20px;">Conclusion</h2>
+                    </div>
+                   <div class="col-12 mt-2">
+                       <p class="text-justify">
+                        The petrol Mahindra Thar is simply a dream to drive thanks to a silent, smooth and powerful motor. Mahindra has pulled off a brilliant job with this mill, which certainly works wonders in its favour.
+                       </p>
+                       <p class="text-justify">
+                        At long last, comparing the Thar to other similarly priced vehicles seems inappropriate since it is an all-together different breed. One whose flaws add to the overall charm of the ownership experience. A truly different life-statement I’d say.
+                       </p>
+                   </div>
+               </div>
+           </div>
+            <div class="col-lg-6 order-1 order-lg-2 mt-2">
+                <div class="row">
+                    <div class="col-12">
+                        <img src="images/Expert-reveiw/Mahindra-Thar-Petrol/Mahindra-Thar-Petrol-2.jpg" class="img-fluid p-1" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-5" id="footer">
+               <div class="row navbar bg-dark text-white">
+                  <div class="col-12">
+                     <center>
+                      <a href="index.html" class="logo-text navbar-brand"><b><span class="text-primary"> C</span>ar<span class="text-primary">W</span>orld</b></a>
+                      </center>
+                  </div>
+                  <div class="col-12 border"></div>
+                   <div class="col-md-4 mt-md-n5">
+                       <ul class="list-group">
+                           <li><a href="index.html">Home</a></li>
+                           <li><a href="About-Us.html">About Us</a></li>
+                           <li><a href="Terms&Conditions.html">Terms &amp; Conditions</a></li>
+                           <li><a href="ContactUs.html">Contact Us</a></li>
+                       </ul>
+                       <div class="row">
+                         <div class="col-12 mb-n3 mt-3">
+                          <p>Connect with us</p>
+                          </div>
+                           <div class="col-1">
+                           <a href="https://www.facebook.com/" >
+                           <i style="font-size: 30px;" class="fab fa-facebook"></i>
+                           </a>
+                           </div>
+                           <div class="col-1">
+                            <a href="https://twitter.com/?lang=en">
+                           <i style="font-size: 30px;" class="fab fa-twitter-square"></i>
+                           </a>
+                           </div>
+                           <div class="col-1">
+                            <a href="https://in.linkedin.com/">
+                           <i style="font-size: 30px;" class="fab fa-linkedin"></i>
+                           </a>
+                           </div>
+                           <div class="col-1">
+                            <a href="https://www.instagram.com/?hl=en">
+                           <i style="font-size: 30px;" class="fab fa-instagram-square"></i>
+                           </a>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-md-4 mt-md-n5 mt-5">
+                   <p><b>CarWorld: </b>A - 1, Karelibaug Road, Opp New Vuda Building, Near L &amp; T Circle, Jay Santhoshi Nagar Society, Karelibagh, Vadodara, Gujarat 390018</p>
+                   <p><b>Phone: </b>+91 6354956340</p>
+                   </div>
+                   <div class="col-md-4 mt-5">
+                       <div class="row">
+                           <div class="col">
+                               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.5503001877332!2d73.19552431426902!3d22.324816047647555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x54b301ff834e827!2sCar%20World!5e1!3m2!1sen!2sin!4v1615259644289!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="row" style="background-color: black;">
+                  <div class="col text-center">
+                   <b class=" text-white">©2021 www.CarWorld.com</b>
+                   </div>
+               </div>
+            </div>
+</body>
+</html>
